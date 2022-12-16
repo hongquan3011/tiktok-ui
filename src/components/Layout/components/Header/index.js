@@ -25,7 +25,19 @@ const MENU_ITEMS=[
     {
         icon: <FontAwesomeIcon icon={faEarthAsia} />,
         title:"English",
-       
+       children:{
+        title:'Language',
+        data:[
+            {
+                code:'en',
+                title:'English'
+            },
+            {
+                code:'vn',
+                title:'Tieng viet'
+            },
+        ],
+       },
     },
     {
         icon: <FontAwesomeIcon icon={faQuestionCircle} />,
@@ -44,6 +56,7 @@ function Header() {
             setSearchResult([]);
         }, 0);
     }, []);
+    
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
