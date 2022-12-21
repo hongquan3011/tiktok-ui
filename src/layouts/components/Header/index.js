@@ -21,7 +21,7 @@ import { UploadIcon, MessengerIcon, Notication } from '~/components/Icons';
 import Images from '~/components/Images';
 import Search from '../Search';
 import { Link } from 'react-router-dom';
-import routersConfig from '~/config/routers';
+import config from '~/config';
 const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [
@@ -86,7 +86,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to={routersConfig.home}>
+                <Link to={config.routers.home}>
                     <img src={images.logo} alt="Tiktok" />
                 </Link>
                 <Search />
@@ -123,7 +123,7 @@ function Header() {
                         {currentUser ? (
                             <Images
                                 className={cx('user-avatar')}
-                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/083bdd98191f72128eebdbcca718c29f~c5_100x100.jpeg?x-expires=1671264000&x-signature=%2FoycxYYWiC3Azp1mHefmeIlfN%2Fk%3D"
+                                src="https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-6/316686549_1516865832161110_5798837938500743717_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=dQqV_MFYwZQAX8r2m6M&_nc_ht=scontent.fdad3-1.fna&oh=00_AfB0GaBdg_jTEZaD3q6ni3hccgMHA9ci8J5BcZD4FlEBtQ&oe=63A8005F"
                                 alt="Nguyen van a"
                             />
                         ) : (
