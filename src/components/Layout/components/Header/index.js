@@ -106,6 +106,7 @@ function Header() {
                             </Tippy>
                             <Tippy content="Notication" placement="bottom">
                                 <button className={cx('action-icon')}>
+                                    <span className={cx('count-notication')}>5</span>
                                     <Notication />
                                 </button>
                             </Tippy>

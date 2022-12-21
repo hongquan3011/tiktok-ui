@@ -30,6 +30,7 @@
     align-items: center;
 }
 .action-icon{
+    position: relative;
     background-color: transparent;
     font-size: 2.2rem;
     color:rgba(22, 24, 35);
@@ -37,6 +38,19 @@
     cursor: pointer;
 
 }
+.count-notication {
+    position: absolute;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    right: 10px;
+    top: 0px;
+}
+
 .more-btn{
     font-size: 2rem;
     margin-left: 28px;
