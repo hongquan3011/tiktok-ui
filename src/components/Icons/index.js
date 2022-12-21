@@ -30,7 +30,7 @@ export const MessengerIcon = ({ width = '2.4rem', height = '2.4rem', className }
         ></path>
     </svg>
 );
-export const Notication = ({ width = '3.2rem', height = '3.2rem', className }) => (
+export const Notification = ({ width = '3.2rem', height = '3.2rem', className }) => (
     <svg
         className={className}
         width={width}
