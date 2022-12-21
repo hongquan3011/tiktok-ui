@@ -14,12 +14,12 @@ import {
     faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react';
-import Button from '~/components/Button';
-import Menu from '~/components/Popper/Menu';
+import Button from '~/components/Button/Button';
+import Menu from '~/components/Popper/Menu/Menu';
 import 'tippy.js/dist/tippy.css';
-import { UploadIcon, MessengerIcon, Notification } from '~/components/Icons';
-import Images from '~/components/Images';
-import Search from '../Search';
+import { UploadIcon, MessengerIcon, Notification } from '~/components/Icons/Icons';
+import Images from '~/components/Images/Images';
+import Search from '../Search/Search';
 import { Link } from 'react-router-dom';
 import config from '~/config';
 const cx = classNames.bind(styles);
