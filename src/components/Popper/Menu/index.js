@@ -7,8 +7,8 @@ import Header from './Header';
 import { useState } from 'react';
 
 const cx = classNames.bind(styles);
-const defaultFn = () => {}
-function Menu({ children, items = [], hideOnClick = false ,onChange = defaultFn }) {
+const defaultFn = () => {};
+function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn }) {
     const [history, setHistory] = useState([{ data: items }]);
     const current = history[history.length - 1];
 
@@ -21,9 +21,9 @@ function Menu({ children, items = [], hideOnClick = false ,onChange = defaultFn 
                     data={item}
                     onClick={() => {
                         if (isParent) {
-                            setHistory(prev => [...prev,item.children])
-                        }else{
-                            onChange(item)
+                            setHistory((prev) => [...prev, item.children]);
+                        } else {
+                            onChange(item);
                         }
                     }}
                 />
@@ -32,6 +32,7 @@ function Menu({ children, items = [], hideOnClick = false ,onChange = defaultFn 
     };
     return (
         <Tippy
+            
             interactive
             delay={[0, 200]}
             placement="bottom-end"
@@ -39,14 +40,19 @@ function Menu({ children, items = [], hideOnClick = false ,onChange = defaultFn 
             render={(attrs) => (
                 <div className={cx('list-item')} tabIndex="-1" {...attrs}>
                     <PopperWrapper className={cx('menu-popper')}>
-                       { history.length > 1 && <Header title="Languages" onBack={()=>{
-                        setHistory(prev => prev.slice(0,prev.length  - 1))
-                       }}/>}
-                        {renderItems()}
+                        {history.length > 1 && (
+                            <Header
+                                title="Languages"
+                                onBack={() => {
+                                    setHistory((prev) => prev.slice(0, prev.length - 1));
+                                }}
+                            />
+                        )}
+                       <div className={cx('menu-language')}>{renderItems()}</div> 
                     </PopperWrapper>
                 </div>
             )}
-            onHidden={()=> setHistory((prev) => prev.slice(0,1))}
+            onHidden={() => setHistory((prev) => prev.slice(0, 1))}
         >
             {children}
         </Tippy>
