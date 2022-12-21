@@ -4,13 +4,13 @@ import Following from '~/pages/Following';
 import Upload from '~/pages/Upload';
 import Profile from '~/pages/Profile';
 import Search from '~/pages/Search';
-
+import routersConfig from '~/config/routers';
 const publicRoutes = [
-    { path: '/', component: Home },
-    { path: '/following', component: Following },
-    { path: '/@:nickname', component: Profile },
-    { path: '/upload', component: Upload ,layout:HeaderOnly},
-    { path: '/search', component: Search ,layout:null},
+    { path: routersConfig.home, component: Home },
+    { path: routersConfig.following, component: Following },
+    { path: routersConfig.profile, component: Profile },
+    { path: routersConfig.upload, component: Upload ,layout:HeaderOnly},
+    { path: routersConfig.search, component: Search ,layout:null},
     
 ];
 const privateRoutes = [];

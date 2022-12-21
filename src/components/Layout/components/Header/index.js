@@ -20,7 +20,10 @@ import 'tippy.js/dist/tippy.css';
 import { UploadIcon, MessengerIcon, Notication } from '~/components/Icons';
 import Images from '~/components/Images';
 import Search from '../Search';
+import { Link } from 'react-router-dom';
+import routersConfig from '~/config/routers';
 const cx = classNames.bind(styles);
+
 const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faEarthAsia} />,
@@ -83,10 +86,10 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <div className={cx('logo')}>
+                <Link to={routersConfig.home}>
                     <img src={images.logo} alt="Tiktok" />
-                </div>
-               <Search/>
+                </Link>
+                <Search />
                 <div className={cx('actions')}>
                     {currentUser ? (
                         <>
