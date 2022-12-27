@@ -116,7 +116,7 @@ function Header() {
                             <Button outline b_1 className={cx('custom')} leftIcon={<FontAwesomeIcon icon={faUpload} />}>
                                 Upload
                             </Button>
-                            <Button primary>Login</Button>
+                            <Button primary to="/">Login</Button>
                         </>
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>

@@ -4,5 +4,10 @@ const routers = {
     profile: '/@:nickname',
     upload: '/upload',
     search: '/search',
+    settings: '/settings',
+    about: '/about',
+    live: '/live'
+
+
 };
 export default routers;
